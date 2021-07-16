@@ -60,7 +60,7 @@ frame.grid(column=3,row=0)
 label = Label(frame, text = "Screen Shooter") #lable
 label.grid(column=5,row=1)
 
-label2=Label(frame, text = "Enter mili secs", anchor='c', pady=120) #lable
+label2=Label(frame, text = "Enter secs", anchor='c', pady=120) #lable
 label2.grid(column=4, row=2)
 
 sec=StringVar()
@@ -83,6 +83,7 @@ while True:
     
     if running:
         sec1=int(sec.get())
+        sec1=sec1 * 1000
         root.after(sec1,print(sec1))
         screenshot()
         root.update()

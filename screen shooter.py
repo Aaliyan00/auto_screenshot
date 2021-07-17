@@ -16,13 +16,13 @@ def screenshot():
         date = time.strftime("%d-%m-%Y", time.localtime())
 
         # directory='C:\Users\aaliyan\Desktop\'
-        os.chdir('C:\\Users\\aaliyan\\Desktop')
+        os.chdir(os.path.expanduser("~\Desktop"))
         try:
             os.mkdir(date)
         except:
-            os.chdir('C:\\Users\\aaliyan\\Desktop\\'+date)
+            os.chdir(os.path.expanduser("~\Desktop")+date)
 
-        os.chdir('C:\\Users\\aaliyan\\Desktop\\'+date)
+        os.chdir(os.path.expanduser("~\Desktop")+date)
 
         image = pyautogui.screenshot()
 

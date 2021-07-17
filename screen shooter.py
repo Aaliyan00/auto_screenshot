@@ -14,15 +14,15 @@ def screenshot():
 
         # take screenshot using pyautogui
         date = time.strftime("%d-%m-%Y", time.localtime())
-
+        Desktop=os.path.expanduser("~\Desktop\\")
         # directory='C:\Users\aaliyan\Desktop\'
-        os.chdir(os.path.expanduser("~\Desktop"))
+        os.chdir(Desktop)
         try:
             os.mkdir(date)
         except:
-            os.chdir(os.path.expanduser("~\Desktop")+date)
+            os.chdir(Desktop+date)
 
-        os.chdir(os.path.expanduser("~\Desktop")+date)
+        os.chdir(Desktop+date)
 
         image = pyautogui.screenshot()
 
